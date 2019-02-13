@@ -1,6 +1,6 @@
 <?php
 
-class EmailList
+class Email
 {
 
 
@@ -25,7 +25,7 @@ class EmailList
 
 
     
-}//END class EmailList
+}//END class Email
 
 
 

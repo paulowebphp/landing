@@ -14,7 +14,7 @@ $(document).ready(function(){
 			{
 	
 				type: "POST",
-				url: "/email-list/create",
+				url: "/emails/create",
 				data: data.serialize()
 	
 			}).done(function(){

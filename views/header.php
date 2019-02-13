@@ -60,7 +60,7 @@
 					
 					<nav id="menu" class="pull-right">
 						<ul>
-							<li><a href="admin/login.html">Login</a></li>
+							<li><a href="/admin/login">Login</a></li>
 						</ul>
 					</nav>
 
