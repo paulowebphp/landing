@@ -1,0 +1,36 @@
+http://www.flatuicolorpicker.com/green-hex-color-code
+
+Emerald: rgba(63, 195, 128, 1) #3fc380 
+
+Ocean Green: #4daf7c
+
+Shamrock: rgba(46, 204, 113, 1) #2ecc71
+
+Jade: #00b16a
+
+Eucalyptus: #26a65b
+
+Caribean green: #03c9a9	
+
+Jungle green: #26c281
+
+Riptide: #86e2d5
+
+
+
+** GREY **
+
+Gallery: #eeeeee
+
+
+** BLUE **
+
+Dodger: rgba(34, 167, 240, 1) #22a7f0
+Curious: rgba(52, 152, 219, 1) #3498db
+
+Mariner: #2c82c9
+
+
+
+
+
