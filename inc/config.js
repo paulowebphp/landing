@@ -13,8 +13,8 @@ $(document).ready(function(){
 		$.ajax(
 			{
 	
-				type: "POST",
-				url: "/emails/create",
+				type: 'POST',
+				url: '/emails/create',
 				data: data.serialize()
 	
 			}).done(function(){

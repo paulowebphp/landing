@@ -1,5 +1,7 @@
 <?php
+session_start();
 
+require 'inc/User.php';
 require 'inc/Email.php';
 require 'inc/configuration.php';
 require 'inc/Slim-2.x/Slim/Slim.php';
@@ -11,16 +13,23 @@ $app = new \Slim\Slim();
 // GET route
 $app->get(
     '/',
-    function () {
+	function() 
+	{
 
-        require_once("views/index.php");
+		if( isset($_SESSION['iduser']) )
+		{
+			User::logout();
+			
+		}
         
+		require_once("views/index.php");
+		
     }
 );
 
 $app->post("/emails/create", function() {
 
-	$email = new Email();
+	$newEmail = new Email();
 
 	if( isset($_POST["email"]) )
 	{
@@ -34,7 +43,7 @@ $app->post("/emails/create", function() {
 
 	}//end if
 
-	$email->save( $email, $name );
+	$newEmail->save( $email, $name );
 	
 	//header("Location: /	");
 	//exit;
@@ -44,11 +53,20 @@ $app->post("/emails/create", function() {
 $app->get('/admin', function() 
 {
     
-	//User::verifyLogin();
+	if( !User::checkLogin() )
+	{
+		require_once("views/admin/login.php");
+	}
+	else
+	{
+		require_once("views/admin/index.php");
+	}
 
-	require_once("views/admin/index.php");
+	
 
 });
+
+
 
 $app->get('/admin/login', function() {
 
@@ -57,19 +75,30 @@ $app->get('/admin/login', function() {
 });
 
 
-$app->post('/admin/login', function() {
+$app->post('/admin', function() {
 
-	User::login($_POST["login"], $_POST["password"]);
+	User::login($_POST["email"], $_POST["password"]);
 
-	header("Location: /admin");
-	exit;
+	if( !isset($_SESSION['iduser']) )
+	{
+		
+		header("Location: /admin/login");
+		exit;
+	}
+	else
+	{
+		require_once("views/admin/index.php");
+
+	}
+
+	
 
 });
 
 
 $app->get('/admin/logout', function() {
 
-	//User::logout();
+	User::logout();
 
 	header("Location: /admin/login");
 	exit;
@@ -80,9 +109,13 @@ $app->get('/admin/logout', function() {
 
 $app->get("/admin/emails", function(){
 
-	//User::verifyLogin();
-
-	//$products = Product::listAll();
+	if( !User::checkLogin() )
+	{
+		header("Location: /admin/login");
+		exit;
+	}
+	
+	$emails = Email::listAll();
 
 	require_once("views/admin/emails.php");
 

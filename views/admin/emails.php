@@ -12,7 +12,7 @@ require_once('header.php');
       </h1>
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Usuários</li>
+        <li class="active">E-mails</li>
       </ol>
     </section>
 
@@ -38,7 +38,7 @@ require_once('header.php');
                 <tbody>
                     <tr>
                         <td>1.</td>
-                        <td>Hcode</td>
+                        <td><?php echo $emails[0]['desemail']; ?></td>
                         <td>contato@hcode.com.br</td>
                         <td>
                             <button type="button" class="btn btn-xs btn-info" data-toggle="modal" data-target="#modal-update"><i class="fa fa-pencil"></i> Editar</button>&nbsp;

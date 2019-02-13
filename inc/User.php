@@ -5,62 +5,46 @@ class User
 
     const SESSION = "User";
 
+	private $iduser;
+	private $deslogin;
+	private $despassword;
+	private $dtregister;
+
+	public function setIduser( $value ) { $this->iduser = $value; }
+	public function getIduser() { return $this->iduser; }
+
+	public function setDeslogin( $value ) { $this->deslogin= $value; }
+	public function getDeslogin() { return $this->deslogin; }
+
+	public function setDespassword( $value ) { $this->despassword = $value; }
+	public function getDespassword() { return $this->despassword; }
+
+	public function setDtregister( $value ) { $this->dtregister = $value; }
+	public function getDtregister() { return $this->dtregister; }
+
+	
     
 
-    public static function getFromSession()
+	public static function checkLogin()
 	{
-
-		$user = new User();
-
-		if (isset($_SESSION[User::SESSION]) && (int)$_SESSION[User::SESSION]['iduser'] > 0) {
-
-			$user->setData($_SESSION[User::SESSION]);
-
-		}
-
-		return $user;
-
-	}
-
-    public static function checkLogin($inadmin = true)
-	{
-
-		if (
-			!isset($_SESSION[User::SESSION])
-			||
-			!$_SESSION[User::SESSION]
-			||
-			!(int)$_SESSION[User::SESSION]["iduser"] > 0
-		) {
-			//Não está logado
+		if( !isset($_SESSION['iduser']) )
+		{
 			return false;
-
-		} else {
-
-			if ($inadmin === true && (bool)$_SESSION[User::SESSION]['inadmin'] === true) {
-
-				return true;
-
-			} else if ($inadmin === false) {
-
-				return true;
-
-			} else {
-
-				return false;
-
-			}
-
+		}
+		else
+		{
+			return true;
 		}
 
-	}
+	}//END checkLogin
+
 
     public static function login($login, $password)
 	{
 
 		$sql = new Sql();
 
-		$results = $sql->select("SELECT * FROM tb_users a INNER JOIN tb_persons b ON a.idperson = b.idperson WHERE a.deslogin = :LOGIN", array(
+		$results = $sql->select("SELECT * FROM tb_users WHERE deslogin = :LOGIN", array(
 			":LOGIN"=>$login
 		)); 
 
@@ -71,20 +55,14 @@ class User
 
 		$data = $results[0];
 
-		if (password_verify($password, $data["despassword"]) === true)
+		if ( $password === $data["despassword"] )
 		{
 
-			$user = new User();
+			$_SESSION['iduser'] = $data['iduser'];
 
-			$data['desperson'] = utf8_encode($data['desperson']);
-
-			$user->setData($data);
-
-		$_SESSION[User::SESSION] = $user->getValues();
-
-			return $user;
-
-		} else {
+		} 
+		else 
+		{
 			throw new \Exception("Usuário inexistente ou senha inválida.");
 		}
 
@@ -93,26 +71,12 @@ class User
 
 
 
-    public static function verifyLogin($inadmin = true)
-	{
-
-		if (!User::checkLogin($inadmin)) {
-
-			if ($inadmin) {
-				header("Location: /admin/login");
-			} else {
-				header("Location: /login");
-			}
-			exit;
-
-		}
-
-	}
 
 	public static function logout()
 	{
 
-		$_SESSION[User::SESSION] = NULL;
+		unset($_SESSION['iduser']);
+		session_destroy();
 
 	}
 

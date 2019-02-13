@@ -4,24 +4,42 @@ class Email
 {
 
 
-    public function save( $email, $person )
+    public static function listAll()
+	{
+
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM tb_emails ORDER BY desemail");
+
+    }//END listAll
+    
+
+
+
+
+
+    public function save( $email, $name )
 	{
 
 		$sql = new Sql();
 
         $results = $sql->query("
 
-            INSERT INTO tb_email_list (desemail, desname, dtregister)
+            INSERT INTO tb_emails (desemail, desname, dtregister)
             VALUES (:desemail, :desname, CURRENT_DATE())
         
         ", 
         [
 			":desemail"=>$email,
-            ":desname"=>$person
+            ":desname"=>$name
                     
         ]);//END query
 
-	}//END save
+    }//END save
+    
+
+
+    
 
 
     
