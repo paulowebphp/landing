@@ -36,7 +36,59 @@ class Email
         ]);//END query
 
     }//END save
+
+
+
+
+
+    public static function getCount():array
+	{
+
+		$sql = new Sql();
+
+		$results = $sql->select("SELECT
+		(SELECT COUNT(*) FROM tb_emails) AS nremails;"); 
+
+		$data = $results[0];
+
+		return $data;
+		
+
+	}//end getCount
+
+
     
+
+
+
+
+    public static function generateCsv()
+    {
+        
+        header("Content-type: application/csv");   
+        header("Content-Disposition: attachment; filename=emails.csv");
+        header("Pragma: no-cache"); 
+
+        $sql = new Sql();
+
+        $results = $sql->select("SELECT desemail, desname FROM tb_emails ORDER BY idemail DESC");
+
+        $out = fopen( 'php://output', 'w' );
+
+        if( $out )
+        {
+
+            foreach ( $results as $result ) 
+            {
+                fputcsv( $out, $result, ';' );
+
+            }//end foreach
+
+            fclose( $out );
+
+        }//end if
+
+    }//end generateCsv
 
 
     

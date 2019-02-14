@@ -5,9 +5,14 @@ class User
 
     const SESSION = "User";
 
+
+
 	private $iduser;
 	private $deslogin;
 	private $desperson;
+
+
+
 
 	public function setIduser( $value ) { $this->iduser = $value; }
 	public function getIduser() { return $this->iduser; }
@@ -36,29 +41,39 @@ class User
 		 )
 		{
 			return false;
-		}
+
+		}//end if
 		else
 		{
 			return true;
-		}
+
+		}//end else
 
 	}//END checkLogin
 
 
-    public static function login($login, $password)
+
+
+
+
+
+    public static function login( $login, $password )
 	{
 		$values = [];
 
 		$sql = new Sql();
 
-		$results = $sql->select("SELECT * FROM tb_users WHERE deslogin = :LOGIN", array(
+		$results = $sql->select("SELECT * FROM tb_users WHERE deslogin = :LOGIN", 
+		[
+
 			":LOGIN"=>$login
-		)); 
+
+		]);//end select
 
 		if (count($results) === 0)
 		{
 			throw new \Exception("Usuário inexistente ou senha inválida.");
-		}
+		}//end if
 
 		$data = $results[0];
 
@@ -79,11 +94,11 @@ class User
 			
 			return $user;
 
-		} 
+		} //end if
 		else 
 		{
 			throw new \Exception("Usuário inexistente ou senha inválida.");
-		}
+		}//end else
 
     }//END login
     
@@ -99,28 +114,6 @@ class User
 		session_destroy();
 
 	}
-
-
-
-
-
-	public static function getCount():array
-	{
-
-		$sql = new Sql();
-
-		$results = $sql->select("SELECT
-		(SELECT COUNT(*) FROM tb_emails) AS nremails;"); 
-
-		$data = $results[0];
-
-		return $data;
-		
-
-	}//end getCount
-
-
-
 
 
 	

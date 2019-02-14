@@ -1,19 +1,22 @@
 <?php
 session_start();
 
+require 'inc/Sql.php';
 require 'inc/functions.php';
 require 'inc/User.php';
 require 'inc/Email.php';
-require 'inc/Sql.php';
-require 'inc/Csv.php';
 require 'inc/Slim-2.x/Slim/Slim.php';
 
 \Slim\Slim::registerAutoloader();
 
 $app = new \Slim\Slim();
 
-// GET route
+
+
+/** ************** VIEWS ******************* */
+
 $app->get(
+
     '/',
 	function() 
 	{
@@ -22,12 +25,18 @@ $app->get(
 		{
 			User::logout();
 			
-		}
+		}//end if
         
 		require_once("views/index.php");
 		
-    }
-);
+    }//end function
+
+);//END route
+
+
+
+
+
 
 $app->post("/emails/create", function() {
 
@@ -50,27 +59,35 @@ $app->post("/emails/create", function() {
 	//header("Location: /	");
 	//exit;
 
-});
+});//END route
+
+
+
+
+
+
+/** ************** LOGIN ******************* */
+
 
 $app->get('/admin', function() 
 {
-	$count = User::getCount();
+	$count = Email::getCount();
 
 	if( !User::checkLogin() )
 	{
 		require_once("views/admin/login.php");
 		
-	}
+	}//end if
 	else
-	{
-		
+	{		
 		require_once("views/admin/index.php");
 		
-	}
+	}//end else
 
-	
+});//END route
 
-});
+
+
 
 
 
@@ -78,30 +95,38 @@ $app->get('/admin/login', function() {
 
 	require_once("views/admin/login.php");
 
-});
+});//END route
+
+
+
+
 
 
 $app->post('/admin/login', function() {
 
 	$users = User::login($_POST["email"], $_POST["password"]);
-	$count = User::getCount();
+	$count = Email::getCount();
 
 	if( !isset($_SESSION[User::SESSION]) )
 	{
 		
 		header("Location: /admin/login");
 		exit;
-	}
+
+	}//end if
 	else
 	{
 		
 		require_once("views/admin/index.php");
 
-	}
+	}//end else
 
-	
+});//END route
 
-});
+
+
+
+
 
 
 $app->get('/admin/logout', function() {
@@ -111,8 +136,15 @@ $app->get('/admin/logout', function() {
 	header("Location: /");
 	exit;
 
-});
+});//END route
 
+
+
+
+
+
+
+/** ************** EMAILS ******************* */
 
 
 $app->get("/admin/emails", function(){
@@ -121,13 +153,18 @@ $app->get("/admin/emails", function(){
 	{
 		header("Location: /admin/login");
 		exit;
-	}
+	}//end if
 
 	$emails = Email::listAll();
 	
 	require_once("views/admin/emails.php");
 
-});
+});//END route
+
+
+
+
+
 
 
 $app->get("/admin/emails/csv", function(){
@@ -136,11 +173,16 @@ $app->get("/admin/emails/csv", function(){
 	{
 		header("Location: /admin/login");
 		exit;
-	}
+	}//end if
 
-	$csv = Csv::generateCsv();
+	$csv = Email::generateCsv();
 
-});
+});//END route
 
 
+
+
+
+
+/****** APP RUN ******** */
 $app->run();
