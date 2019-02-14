@@ -102,8 +102,9 @@ $app->get('/admin/login', function() {
 
 
 
-$app->post('/admin/login', function() {
-
+$app->post('/admin/login', function() 
+{
+	
 	$users = User::login($_POST["email"], $_POST["password"]);
 	$count = Email::getCount();
 

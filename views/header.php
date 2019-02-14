@@ -17,16 +17,13 @@
 	<body>
 
 		<header>
-			<!-- 
+			
 			<div id="menu-mobile-mask" class="visible-xs"></div>
 
 			<div id="menu-mobile" class="visible-xs">
 				
 				<ul class="list-unstyled">
-					<li><a href="videos">Home</a></li>
-					<li><a href="videos">Lorem</a></li>
-					<li><a href="#">Ipsum</a></li>
-					<li><a href="#">Civis</a></li>
+					<li><a href="/admin/login">Login</a></li>
 				</ul>
 
 				<div class="bar-close">
@@ -35,7 +32,7 @@
 
 			</div>
 			
-			
+			<!-- 
 				<div class="container">
 				<img id="logotipo" src="img/logo.png" style="width:128px; heigth:146px;" alt="Logotipo">
 			</div>

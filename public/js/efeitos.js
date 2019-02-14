@@ -51,9 +51,11 @@ $(document).ready(function(){
 
   	});
 
+
+
   	$("#btn-bars").on("click", function(){
 
-  		$("header").toggleClass("open-menu");
+		$("header").toggleClass("open-menu");
 
   	});
 

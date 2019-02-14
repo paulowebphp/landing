@@ -77,7 +77,9 @@ class User
 
 		$data = $results[0];
 
-		if ( $password === $data["despassword"] )
+		
+
+		if ( password_verify($password, $data["despassword"]) === true )
 		{
 
 			$user = new User();
@@ -113,10 +115,35 @@ class User
 		$_SESSION[User::SESSION] = NULL;
 		session_destroy();
 
-	}
+	}//END logout
+
+
+
+
+
+	/** AINDA NÃO TEM SIDO USADO POIS O PASSWORD ESTÁ SENDO COLOCADO DIRETAMENTE NO BANCO DE DADOS */
+	public static function getPasswordHash( $password )
+	{
+
+		return password_hash(
+
+			$password, 
+
+			PASSWORD_DEFAULT, 
+			
+			[
+				'cost'=>12
+
+			]
+
+		);//end password_hash
+
+	}//END getPasswordHash
 
 
 	
+
+
 
 
 }//END class User
