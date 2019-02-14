@@ -40,7 +40,7 @@ require_once('header.php');
                     <tr>
                         <td><?php echo $i++; ?>.</td>
                         <td><?php echo $email['desemail']; ?></td>
-                        <td><?php echo $email['desname']; ?></td>
+                        <td><?php echo utf8_encode($email['desname']); ?></td>
                         
                         <td>
                           <!--

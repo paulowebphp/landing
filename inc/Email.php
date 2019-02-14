@@ -21,7 +21,9 @@ class Email
     public function save( $email, $name )
 	{
 
-		$sql = new Sql();
+        $sql = new Sql();
+        
+        $name = utf8_decode($name);
 
         $results = $sql->query("
 
