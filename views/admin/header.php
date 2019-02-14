@@ -45,7 +45,7 @@
                 <!-- The user image in the navbar-->
                 <img src="./../../public/admin/dist/img/avatar5.png" class="user-image" alt="User Image">
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                <span class="hidden-xs">Fulano Junior</span>
+                <span class="hidden-xs"></span>
               </a>
               <ul class="dropdown-menu">
                 <!-- The user image in the menu -->
@@ -53,8 +53,8 @@
                   <img src="./../../public/admin/dist/img/avatar5.png" class="img-circle" alt="User Image">
 
                   <p>
-                    Fulano Junior
-                    <small>fulano@hcode.com.br</small>
+                  <?php echo $_SESSION[User::SESSION][2]; ?>
+                    <small><?php echo $_SESSION[User::SESSION][1];; ?></small>
                   </p>
                 </li>
                 <!-- Menu Footer-->
@@ -84,7 +84,7 @@
             <img src="./../../public/admin/dist/img/avatar5.png" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
-            <p>Fulano Junior</p>
+            <p><?php echo $_SESSION[User::SESSION][1]; ?></p>
             <!-- Status -->
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
           </div>
@@ -97,7 +97,7 @@
           <li class="active">
             <a href="/admin">
               <i class="fa fa-home"></i>
-              <span>Tela Inicial</span>
+              <span>Início</span>
             </a>
           </li>
           <li>

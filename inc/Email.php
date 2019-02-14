@@ -9,7 +9,7 @@ class Email
 
 		$sql = new Sql();
 
-		return $sql->select("SELECT * FROM tb_emails ORDER BY desemail");
+		return $sql->select("SELECT * FROM tb_emails ORDER BY idemail DESC  LIMIT 15");
 
     }//END listAll
     

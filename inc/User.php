@@ -7,8 +7,7 @@ class User
 
 	private $iduser;
 	private $deslogin;
-	private $despassword;
-	private $dtregister;
+	private $desperson;
 
 	public function setIduser( $value ) { $this->iduser = $value; }
 	public function getIduser() { return $this->iduser; }
@@ -16,18 +15,23 @@ class User
 	public function setDeslogin( $value ) { $this->deslogin= $value; }
 	public function getDeslogin() { return $this->deslogin; }
 
-	public function setDespassword( $value ) { $this->despassword = $value; }
-	public function getDespassword() { return $this->despassword; }
+	public function setDesperson( $value ) { $this->desperson = $value; }
+	public function getDesperson() { return $this->desperson; }
 
-	public function setDtregister( $value ) { $this->dtregister = $value; }
-	public function getDtregister() { return $this->dtregister; }
+
 
 	
     
 
 	public static function checkLogin()
 	{
-		if( !isset($_SESSION['iduser']) )
+		if( 
+			!isset($_SESSION[User::SESSION])
+			||
+			!$_SESSION[User::SESSION]
+			||
+			!(int)$_SESSION[User::SESSION][0] > 0
+		 )
 		{
 			return false;
 		}
@@ -41,6 +45,7 @@ class User
 
     public static function login($login, $password)
 	{
+		$values = [];
 
 		$sql = new Sql();
 
@@ -58,7 +63,19 @@ class User
 		if ( $password === $data["despassword"] )
 		{
 
-			$_SESSION['iduser'] = $data['iduser'];
+			$user = new User();
+
+			$user->setIduser($data['iduser']);
+			$user->setDeslogin($data['deslogin']);
+			$user->setDesperson($data['desperson']);
+			
+			$values = [$user->getIduser(), $user->getDeslogin(), $user->getDesperson()];
+
+
+			//$_SESSION['iduser'] = $data['iduser'];
+			$_SESSION[User::SESSION] = $values;
+			
+			return $user;
 
 		} 
 		else 
@@ -75,11 +92,36 @@ class User
 	public static function logout()
 	{
 
-		unset($_SESSION['iduser']);
+		//unset($_SESSION['iduser']);
+		$_SESSION[User::SESSION] = NULL;
 		session_destroy();
 
 	}
 
+
+
+
+
+	public static function getCount():array
+	{
+
+		$sql = new Sql();
+
+		$results = $sql->select("SELECT
+		(SELECT COUNT(*) FROM tb_emails) AS nremails;"); 
+
+		$data = $results[0];
+
+		return $data;
+		
+
+	}//end getCount
+
+
+
+
+
+	
 
 
 }//END class User

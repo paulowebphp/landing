@@ -26,7 +26,7 @@
     <div class="login-box-body">
       <p class="login-box-msg">Acesso a Área Restrita</p>
 
-      <form action="/admin" method="post">
+      <form action="/admin/login" method="post">
         <div class="form-group has-feedback">
           <input type="email" name="email" class="form-control" placeholder="E-mail">
           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>

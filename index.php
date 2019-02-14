@@ -52,14 +52,18 @@ $app->post("/emails/create", function() {
 
 $app->get('/admin', function() 
 {
-    
+	$count = User::getCount();
+
 	if( !User::checkLogin() )
 	{
 		require_once("views/admin/login.php");
+		
 	}
 	else
 	{
+		
 		require_once("views/admin/index.php");
+		
 	}
 
 	
@@ -75,11 +79,12 @@ $app->get('/admin/login', function() {
 });
 
 
-$app->post('/admin', function() {
+$app->post('/admin/login', function() {
 
-	User::login($_POST["email"], $_POST["password"]);
+	$users = User::login($_POST["email"], $_POST["password"]);
+	$count = User::getCount();
 
-	if( !isset($_SESSION['iduser']) )
+	if( !isset($_SESSION[User::SESSION]) )
 	{
 		
 		header("Location: /admin/login");
@@ -87,6 +92,7 @@ $app->post('/admin', function() {
 	}
 	else
 	{
+		
 		require_once("views/admin/index.php");
 
 	}
@@ -100,7 +106,7 @@ $app->get('/admin/logout', function() {
 
 	User::logout();
 
-	header("Location: /admin/login");
+	header("Location: /");
 	exit;
 
 });
@@ -114,7 +120,7 @@ $app->get("/admin/emails", function(){
 		header("Location: /admin/login");
 		exit;
 	}
-	
+
 	$emails = Email::listAll();
 
 	require_once("views/admin/emails.php");

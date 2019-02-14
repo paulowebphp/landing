@@ -8,10 +8,10 @@ require_once('header.php');
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Usuários
+        Últimos E-mails
       </h1>
       <ol class="breadcrumb">
-        <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/admin"><i class="fa fa-home"></i> Home</a></li>
         <li class="active">E-mails</li>
       </ol>
     </section>
@@ -22,30 +22,36 @@ require_once('header.php');
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Lista</h3>
-            <a href="#" class="btn btn-xs pull-right btn-success" data-toggle="modal" data-target="#modal-create"><i class="fa fa-plus"></i> Novo</a>
-        </div>
+            <a href="#" class="btn btn-xs pull-right btn-success" data-toggle="modal" data-target="#modal-create"><i class="fa fa-download"></i> Download XLSX</a>
+        </div>  
         <!-- /.box-header -->
         <div class="box-body no-padding">
             <table class="table table-striped table-hover">
                 <thead>
                   <tr>
                     <th style="width: 10px">#</th>
-                    <th>Nome</th>
                     <th>E-mail</th>
+                    <th>Nome</th>
                     <th style="min-width: 134px;">Ações</th>
                   </tr>
                 </thead>
                 <tbody>
+                  <?php $i = 1; ?>
+                  <?php foreach( $emails as $email ): ?>
                     <tr>
-                        <td>1.</td>
-                        <td><?php echo $emails[0]['desemail']; ?></td>
-                        <td>contato@hcode.com.br</td>
+                        <td><?php echo $i++; ?>.</td>
+                        <td><?php echo $email['desemail']; ?></td>
+                        <td><?php echo $email['desname']; ?></td>
+                        
                         <td>
                             <button type="button" class="btn btn-xs btn-info" data-toggle="modal" data-target="#modal-update"><i class="fa fa-pencil"></i> Editar</button>&nbsp;
                             <button type="button" class="btn btn-xs btn-warning btn-update" data-toggle="modal" data-target="#modal-update-password">
                                 <i class="fa fa-lock"></i> Alterar Senha</button>&nbsp;
-                            <button type="button" class="btn btn-xs btn-danger btn-delete"><i class="fa fa-trash"></i> Excluir</button></td>
+                            <button type="button" class="btn btn-xs btn-danger btn-delete"><i class="fa fa-trash"></i> Excluir</button>
+                          </td>
+                          
                     </tr>
+                  <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
