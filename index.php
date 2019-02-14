@@ -1,9 +1,10 @@
 <?php
 session_start();
 
+require 'inc/functions.php';
 require 'inc/User.php';
 require 'inc/Email.php';
-require 'inc/configuration.php';
+require 'inc/Sql.php';
 require 'inc/Slim-2.x/Slim/Slim.php';
 
 \Slim\Slim::registerAutoloader();
@@ -122,7 +123,7 @@ $app->get("/admin/emails", function(){
 	}
 
 	$emails = Email::listAll();
-
+	
 	require_once("views/admin/emails.php");
 
 });

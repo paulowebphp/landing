@@ -18,6 +18,8 @@ class User
 	public function setDesperson( $value ) { $this->desperson = $value; }
 	public function getDesperson() { return $this->desperson; }
 
+	
+
 
 
 	

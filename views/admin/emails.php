@@ -30,28 +30,31 @@ require_once('header.php');
                 <thead>
                   <tr>
                     <th style="width: 10px">#</th>
-                    <th>E-mail</th>
+                    <th style="min-width: 134px;">E-mail</th>
                     <th>Nome</th>
-                    <th style="min-width: 134px;">Ações</th>
+                    <th>Data</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <?php $i = 1; ?>
-                  <?php foreach( $emails as $email ): ?>
+                  <?php $i = 1; foreach( $emails as $email ): ?>
                     <tr>
                         <td><?php echo $i++; ?>.</td>
                         <td><?php echo $email['desemail']; ?></td>
                         <td><?php echo $email['desname']; ?></td>
                         
                         <td>
+                          <!--
                             <button type="button" class="btn btn-xs btn-info" data-toggle="modal" data-target="#modal-update"><i class="fa fa-pencil"></i> Editar</button>&nbsp;
                             <button type="button" class="btn btn-xs btn-warning btn-update" data-toggle="modal" data-target="#modal-update-password">
                                 <i class="fa fa-lock"></i> Alterar Senha</button>&nbsp;
                             <button type="button" class="btn btn-xs btn-danger btn-delete"><i class="fa fa-trash"></i> Excluir</button>
-                          </td>
+                          -->
+                          
+                          <?php echo formatDate($email['dtregister']); ?>
+                        </td>
                           
                     </tr>
-                  <?php endforeach; ?>
+                  <?php endforeach; unset($i); ?>
                 </tbody>
             </table>
         </div>

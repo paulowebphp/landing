@@ -26,7 +26,7 @@ class Email
         $results = $sql->query("
 
             INSERT INTO tb_emails (desemail, desname, dtregister)
-            VALUES (:desemail, :desname, CURRENT_DATE())
+            VALUES (:desemail, :desname, NOW())
         
         ", 
         [
