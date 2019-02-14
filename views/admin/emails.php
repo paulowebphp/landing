@@ -22,7 +22,7 @@ require_once('header.php');
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Lista</h3>
-            <a href="#" class="btn btn-xs pull-right btn-success" data-toggle="modal" data-target="#modal-create"><i class="fa fa-download"></i> Download XLSX</a>
+            <a href="/admin/emails/csv" id="download-csv" class="btn btn-xs pull-right btn-success"><i class="fa fa-download"></i> Download CSV</a>
         </div>  
         <!-- /.box-header -->
         <div class="box-body no-padding">

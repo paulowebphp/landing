@@ -36,9 +36,39 @@ $(document).ready(function(){
 	}//END save
 
 
+	
 
+	$('#download-csv').on('click',function(e){
 
+		e.preventDefault();
+		generateCsv($(this));
 
+	});
+
+	function generateCsv(data)
+	{
+
+		$.ajax(
+			{
+	
+				type: 'GET',
+				url: '/emails/csv',
+				data: data.serialize()
+	
+			}).done(function(){
+	
+					console.log("Success....");
+	
+			}).fail(function(){
+	
+					console.log("ERRO ......");
+	
+			});//end $.ajax
+
+		
+	
+
+	}//END generateCsv
 
 
 

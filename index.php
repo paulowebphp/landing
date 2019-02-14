@@ -5,6 +5,7 @@ require 'inc/functions.php';
 require 'inc/User.php';
 require 'inc/Email.php';
 require 'inc/Sql.php';
+require 'inc/Csv.php';
 require 'inc/Slim-2.x/Slim/Slim.php';
 
 \Slim\Slim::registerAutoloader();
@@ -125,6 +126,19 @@ $app->get("/admin/emails", function(){
 	$emails = Email::listAll();
 	
 	require_once("views/admin/emails.php");
+
+});
+
+
+$app->get("/admin/emails/csv", function(){
+
+	if( !User::checkLogin() )
+	{
+		header("Location: /admin/login");
+		exit;
+	}
+
+	$csv = Csv::generateCsv();
 
 });
 
