@@ -4,6 +4,8 @@ class User
 {
 
     const SESSION = "User";
+	const ERROR = "UserError";
+	const SUCCESS = "UserSucesss";
 
 
 
@@ -140,6 +142,85 @@ class User
 
 	}//END getPasswordHash
 
+
+
+
+
+
+	public static function setError( $msg )
+	{
+
+		$_SESSION[User::ERROR] = $msg;
+
+	}//END setError
+
+
+
+
+
+
+	public static function getError()
+	{
+
+		$msg = (isset($_SESSION[User::ERROR]) && $_SESSION[User::ERROR]) ? $_SESSION[User::ERROR] : '';
+
+		User::clearError();
+
+		return $msg;
+
+	}//END getError
+
+
+
+
+
+
+	public static function clearError()
+	{
+
+		$_SESSION[User::ERROR] = NULL;
+
+	}//END clearError
+
+
+
+
+
+
+	public static function setSuccess( $msg )
+	{
+
+		$_SESSION[User::SUCCESS] = $msg;
+
+	}//END setSuccess
+
+
+
+
+
+
+	public static function getSuccess()
+	{
+
+		$msg = (isset($_SESSION[User::SUCCESS]) && $_SESSION[User::SUCCESS]) ? $_SESSION[User::SUCCESS] : '';
+
+		User::clearSuccess();
+
+		return $msg;
+
+	}//END getSuccess
+
+
+
+
+
+
+	public static function clearSuccess()
+	{
+
+		$_SESSION[User::SUCCESS] = NULL;
+
+	}//END clearSuccess
 
 	
 

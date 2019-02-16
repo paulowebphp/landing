@@ -104,8 +104,37 @@ $app->get('/admin/login', function() {
 
 $app->post('/admin/login', function() 
 {
+
+	if (!isset($_POST['email']) || $_POST['email'] == '')
+	{
+		User::setError("Preencha o seu e-mail.");
+		header("Location: /admin/login");
+		exit;
+
+	}//end if
+
+	if (!isset($_POST['password']) || $_POST['password'] == '') {
+
+		
+		User::setError("Preencha a sua senha.");
+
 	
-	$users = User::login($_POST["email"], $_POST["password"]);
+		header("Location: /admin/login");
+		exit;
+
+	}//end if
+
+	try 
+	{
+		$users = User::login($_POST["email"], $_POST["password"]);
+
+	}//end try
+	catch(\Exception $e) {
+
+		User::setError($e->getMessage());
+
+	}//end catch
+	
 	$count = Email::getCount();
 
 	if( !isset($_SESSION[User::SESSION]) )

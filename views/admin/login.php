@@ -26,6 +26,12 @@
     <div class="login-box-body">
       <p class="login-box-msg">Acesso a Área Restrita</p>
 
+      <?php if( isset($_SESSION[User::ERROR]) && $_SESSION[User::ERROR] != '' ): ?>
+        <div class="alert alert-danger">
+            <?php echo User::getError(); ?>
+        </div>
+      <?php endif; ?>
+
       <form action="/admin/login" method="post">
         <div class="form-group has-feedback">
           <input type="email" name="email" class="form-control" placeholder="E-mail">
