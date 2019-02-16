@@ -5,15 +5,15 @@
 class Sql
 {
 
-	const HOSTNAME = "localhost";
-	const USERNAME = "root";
-	const PASSWORD = "";
-	const DBNAME = "db_landing";
+	#const HOSTNAME = "localhost";
+	#const USERNAME = "root";
+	#const PASSWORD = "";
+	#const DBNAME = "db_landing";
 
-	#const HOSTNAME = "162.241.2.229";
-	#const USERNAME = "amarca35_user";
-	#const PASSWORD = "We0@2vtPAzB4";
-	#const DBNAME = "amarca35_db_landing";
+	const HOSTNAME = "162.241.2.229";
+	const USERNAME = "amarca35_user";
+	const PASSWORD = "We0@2vtPAzB4";
+	const DBNAME = "amarca35_db_landing";
 
 
 	private $conn;
