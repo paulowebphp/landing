@@ -21,7 +21,6 @@
     [ Validate ]*/
     var name = $('.validate-input input[name="name"]');
     var email = $('.validate-input input[name="email"]');
-    var message = $('.validate-input textarea[name="message"]');
 
 
     $('.validate-form').on('submit',function(){

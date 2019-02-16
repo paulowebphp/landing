@@ -3,7 +3,25 @@ $(document).ready(function(){
 	$('#contact3-form').submit(function(e){
 
 		e.preventDefault();
-		save($(this));
+		$(this)[0].children[3].children[0].disabled = true;
+
+		console.log($(this)[0]);
+
+		if( !$(this)[0].name.value || $(this)[0].name.value == '' )
+		{
+			window.location = '/';	
+		}
+		else if( !$(this)[0].email.value || $(this)[0].email.value == '' )
+		{
+			window.location = '/';
+		}
+		else
+		{
+			save($(this));
+			
+		}
+		$(this)[0].reset()
+		$(this)[0].children[3].children[0].disabled = false;
 
 	});//END submit
 
@@ -11,6 +29,7 @@ $(document).ready(function(){
 
 	function save( data )
 	{
+		
 		$.ajax(
 		{
 
