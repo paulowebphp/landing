@@ -15,14 +15,16 @@
 
 	</head>
 	<body>
+		
 
 		<header>
 			
-			<div id="menu-mobile-mask" class="visible-xs"></div>
+			<div id="menu-mobile-mask" class="container visible-xs"></div>
 
-			<div id="menu-mobile" class="visible-xs">
+			<div id="menu-mobile" class="container visible-xs">
 				
 				<ul class="list-unstyled">
+					<li><a href="http://www.fat32.com.br/">Portfólio</a></li>
 					<li><a href="/admin/login">Login</a></li>
 				</ul>
 
@@ -38,30 +40,22 @@
 			</div>
 			-->
 
-			<div id="row-hr-1" class="visible-xs">
+			<div id="row-hr-1" class="container visible-xs">
 				
-				<div class="container">
-
-					<input type="search" id="input-search-mobile" class="visible-xs" placeholder="Buscarum...">
+				<input type="search" id="input-search-mobile" class="visible-xs" placeholder="Buscarum...">
 				
-					<button id="btn-bars" type="button"><i class="fa fa-bars"></i></button>
-					<button id="btn-search" type="button"><i class="fa fa-search"></i></button>
-
-				</div>
-
+				<button id="btn-bars" type="button"><i class="fa fa-bars"></i></button>
+				
 			</div>
 
-			<div class="hidden-xs" class="container">
+			<div class="container hidden-xs">
 				
-				<div class="row">
-					
-					<nav id="menu" class="pull-right">
-						<ul>
-							<li><a href="/admin/login">Login</a></li>
-						</ul>
-					</nav>
-
-				</div>
+				<nav id="menu" class="pull-right">
+					<ul>
+						<li><a href="http://www.fat32.com.br/">Portfólio</a></li>
+						<li><a href="/admin/login">Login</a></li>
+					</ul>
+				</nav>
 
 			</div>			
 

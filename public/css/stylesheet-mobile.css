@@ -1,5 +1,9 @@
+
 /*Tamanho padrão para tablets*/
 @media only screen and (max-width: 768px) {
+	.container {
+		width: 100%;
+	}
 	header #logotipo {
 		display: none;;
 	}
@@ -41,9 +45,7 @@
 		font-size: 22px;
 	}
 
-	#row-section-1 {
-		height: inherit;
-	}
+
 	#row-section-1 p {
 		margin-bottom: 40px;
 	}
@@ -90,9 +92,7 @@
 	footer .list-socials i {
 		font-size: 30px;
 	}
-	footer .row-footer-1 {
-		height: 157px;
-	}
+	
 	footer .btn-footer {
 		width: 100%;
 		background-color: #11171D;
@@ -122,9 +122,9 @@
 	header #menu-mobile {
 		position: fixed;
 		background-color: #3498db;
-		width: 80%;
+		width: 60%;
 		height: 100%;
-		left:-80%;
+		left:-60%;
 		transition: 1s;
 		z-index: 5;
 	}
@@ -148,7 +148,7 @@
 	}
 	header.open-menu #menu-mobile ul {
 		margin: 20px;
-		margin-top: 100px;
+		margin-top: 60px;
 	}
 	header.open-menu #menu-mobile li {
 		text-align: center;
@@ -163,11 +163,13 @@
 		font-weight: bold;
 		font-size: 16px;
 		padding: 18px;
-    	display: block;
+		display: block;
+		text-decoration: none;
 	}
 	header.open-menu .bar-close {
 		position: absolute;
 		bottom: 40px;
+		right: 0;
 		background-color: #2c82c9;
 		height: 40px;
 		width: 100%;
@@ -181,8 +183,8 @@
 	header #input-search-mobile {
 		transition: 1s;
 		position: fixed;
-		width: 60%;
-		left: 30%;
+		width: 40%;
+		left: 20%;
 		background-color: #3498db;
 		border: none;
 		height: 40px;
@@ -225,9 +227,56 @@
 		content: "\f09a";
 		color: #11171D;
 	}
+	#row-section-1 p {
+		font-size: 36px;
+		
+	}
+	#row-section-1 p small {
+		font-weight: normal;
+		font-size: 24px;
+	}
+	
+	#row-section-1 img {
+		width: 60%;
+	}
+	
 
+	#row-section-2 p {
+		font-size: 36px;
+		
+	}
+	#row-section-2 p small {
+		font-weight: normal;
+		font-size: 24px;
+	}
+	#row-section-2 img {
+		width: 60%;
+	}
 
+	#row-section-3 p {
+		font-size: 36px;
+		
+	}
+	#row-section-3 p small {
+		font-weight: normal;
+		font-size: 24px;
+	}
 
+	#row-section-3 img {
+		width: 60%;
+	}
+	#row-section-4 p {
+		font-size: 36px;
+		
+	}
+	#row-section-4 p small {
+		font-weight: normal;
+		font-size: 24px;
+	}
+	
+	#row-section-4 img {
+		width: 60%;
+	}
 
 }
 

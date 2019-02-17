@@ -2,8 +2,7 @@
 
 		<section>
 
-		<div id="background-fixed"></div>
-		
+				
 		<div id="row-section-1">
 				
 				<div class="container">
@@ -64,7 +63,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
-						<img src="./../public/images/plastic1.png" style="height:300px;" alt="Signal">
+						<img src="./../public/images/plastic1.png" alt="Signal">
 						</div>
 						<div class="col-md-6">
 							<p>Acquamarine vida threat est<small>Escasso chronos planeta salvare tenen. Ecossistema degradare irremediable</small></p>
@@ -84,7 +83,7 @@
 							<p>Crises mundial<small>Personas del globo chronos habeas. Problema de uno solo no est. Generale estribum cada est</small></p>
 						</div>
 						<div class="col-md-6">
-						<img src="./../public/images/plastic2.png" id="stadium" style="height:300px;" alt="Signal">
+						<img src="./../public/images/plastic2.png" id="stadium" alt="Signal">
 						</div>
 
 					</div>
@@ -101,7 +100,7 @@
 						</div>
 						
 						<div class="col-md-6">
-							<img src="./../public/images/recycle.png" id="stadium" style="height:300px;" alt="Signal">
+							<img src="./../public/images/recycle.png" id="stadium" alt="Signal">
 						</div>
 					</div>
 				</div>

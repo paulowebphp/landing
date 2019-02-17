@@ -34,7 +34,7 @@ header {
 	height: 80px;
 	background-color: rgba(52, 152, 219, 1);
 	z-index: 2;
-    position: relative;
+  position: relative;
 }
 header .container {
 	position: relative;
@@ -77,7 +77,13 @@ header #logotipo {
 	font-size:12em;
 }
 #menu {
-	margin: 12px 0;
+	margin: 25px 15px;
+
+}
+
+#menu ul {
+	position: relative;
+  right: 20px;
 }
 #menu li {
 	display: inline-block;
@@ -124,7 +130,6 @@ header #logotipo {
 }
 
 #row-section-1 {
-	width: 100%;
 	position: relative;
 	background: url("./../../public/images/banner.jpg") no-repeat;
 	background-size: cover;
@@ -160,9 +165,9 @@ header #logotipo {
 
 }
 #row-section-2 img {
-	top: 50px;
+	width: 80%;
 	position: relative;
-	height: 300px;
+	right: 28px;
 }
 
 #row-section-2 p small {
@@ -178,7 +183,6 @@ header #logotipo {
 	width: 100%;
 	text-align: center;
 	padding: 50px;
-	margin-bottom: 50px;
 }
 #row-section-3 p {
 	color: #fff;
@@ -194,9 +198,9 @@ header #logotipo {
 	display: block;
 }
 #row-section-3 img {
-	top: 50px;
+	width: 80%;
 	position: relative;
-	margin-bottom: 50px;
+	
 }
 
 
@@ -208,7 +212,7 @@ header #logotipo {
 	margin-bottom: 50px;
 }
 #row-section-4 p {
-	color: #3498db;
+	color: #f22613;
 	font-family: 'OpenSans';
 	font-size: 54px;
 	text-shadow: 1px 1px 1px #000;
@@ -221,9 +225,9 @@ header #logotipo {
 	display: block;
 }
 #row-section-4 img {
-	top: 50px;
+	width: 80%;
 	position: relative;
-	margin-bottom: 50px;
+	
 }
 
 
@@ -232,15 +236,20 @@ header #logotipo {
 
 #menu li a {
 	color: #fff;
-	font-size: 18px;
+	font-size: 16px;
 	padding: 10px 25px;
 	font-weight: 400;
+	text-decoration: none;
+	border: #fff solid 1px;
+  border-radius: 25px;
+}
+
+#menu li a:hover {
+	background-color: #22a7f0;
 }
 
 
-footer {
-	margin-top: 110px;
-}
+
 footer .row {
 	width: 100%;
 	margin-left: 0;
@@ -278,7 +287,7 @@ footer .col-get-in-touch {
 }
 footer .row-cols h4 {
 	font-family: 'OpenSans';
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: bolder;
 	color: #11171D;
 	padding-bottom: 17px;
@@ -340,14 +349,14 @@ footer .list-socials li {
 footer .list-socials a {
 	display: block;
 	border: #11171D 1px solid;
-	width: 28px;
-	height: 28px;
+	width: 40px;
+	height: 40px;
 	line-height: 28px;
-	border-radius: 14px;
+	border-radius: 25px;
 	text-align: center;
 }
 footer .list-socials i {
-	font-size: 16px;
+	font-size: 25px;
 	margin: 7px auto;
 }
 video {
@@ -369,6 +378,7 @@ video {
 .fa-map-marker:before {
 	content: "\f041";
 	color: #11171D;
+	line-height: 25px;
 }
 
 .fa-pinterest-p:before {
@@ -652,7 +662,7 @@ iframe {
 .contact3-form-title {
   display: block;
   font-family: Poppins-Bold;
-  font-size: 39px;
+  font-size: 30px;
   color: #fff;
   line-height: 1.2;
   text-align: center;

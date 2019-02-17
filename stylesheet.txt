@@ -32,5 +32,12 @@ Mariner: #2c82c9
 
 
 
+** red **
+
+Scarlet: #f22613
+Thunderbird: #d91e18
+
+
+
 
 
