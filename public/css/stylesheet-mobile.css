@@ -1,6 +1,6 @@
 
 /*Tamanho padrão para tablets*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 765px) {
 	.container {
 		width: 100%;
 	}
@@ -74,11 +74,8 @@
 		margin: 0;
 	}
 	footer .list-socials {
-		position: absolute;
 		text-align: center;
 		width: 100%;
-		left: 0;
-		top: 50px;
 
 	}
 	footer .col-md-10 {
@@ -184,7 +181,7 @@
 		transition: 1s;
 		position: fixed;
 		width: 40%;
-		left: 20%;
+		left: 36%;
 		background-color: #3498db;
 		border: none;
 		height: 40px;
@@ -277,6 +274,8 @@
 	#row-section-4 img {
 		width: 60%;
 	}
+
+	
 
 }
 
