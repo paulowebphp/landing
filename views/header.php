@@ -25,6 +25,7 @@
 				
 				<ul class="list-unstyled">
 					<li><a href="http://www.fat32.com.br/">Portfólio</a></li>
+					<li><a href="http://www.borussia.fat32.com.br/">Borussia</a></li>
 					<li><a href="/admin/login">Login</a></li>
 				</ul>
 
@@ -53,6 +54,7 @@
 				<nav id="menu" class="pull-right">
 					<ul>
 						<li><a href="http://www.fat32.com.br/">Portfólio</a></li>
+						<li><a href="http://www.borussia.fat32.com.br/">Borussia</a></li>
 						<li><a href="/admin/login">Login</a></li>
 					</ul>
 				</nav>
