@@ -19,9 +19,9 @@
 
 		<header>
 			
-			<div id="menu-mobile-mask" class="container visible-xs"></div>
+			<div id="menu-mobile-mask" class="container"></div>
 
-			<div id="menu-mobile" class="container visible-xs">
+			<div id="menu-mobile" class="container">
 				
 				<ul class="list-unstyled">
 					<li><a href="http://www.fat32.com.br/">Portfólio</a></li>
@@ -44,15 +44,15 @@
 			</div>
 			-->
 
-			<div id="row-hr-1" class="container visible-xs">
+			<div id="row-hr-1" class="container">
 				
-				<input type="search" id="input-search-mobile" class="visible-xs" placeholder="Buscarum...">
+				<input type="search" id="input-search-mobile"	 placeholder="Buscarum...">
 				
 				<button id="btn-bars" type="button"><i class="fa fa-bars"></i></button>
 				
 			</div>
 
-			<div class="container hidden-xs">
+			<div class="container">
 				
 				<nav id="menu" class="pull-right">
 					<ul>

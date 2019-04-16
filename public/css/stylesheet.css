@@ -42,18 +42,17 @@ header .container {
 	position: relative;
 }
 
-
-
-
-#row-hr-1 {
-	background-color: #3498db;
-	height: 40px;
+header #menu-mobile{
+	display: none;
 }
 
-header #row-hr-1 li a {
-	width: 32px;
-	height: 32px;
-	display: block;
+header #menu-mobile-mask
+{
+	display: none;
+}
+header #row-hr-1
+{
+	display: none;
 }
 
 #row-hr-2 {
@@ -363,6 +362,7 @@ footer .list-socials i {
 video {
 	width: 60%;
 }
+
 #btn-bars, #btn-search {
 	display: none;
 }
@@ -672,10 +672,7 @@ iframe {
 }
 
 
-header. #menu-mobile
-{
-	display:none;
-}
+
 
 header nav{
 	margin: 30px;

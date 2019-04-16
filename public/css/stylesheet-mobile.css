@@ -1,6 +1,7 @@
 
 /*Tamanho padrão para tablets*/
-@media only screen and (max-width: 765px) {
+/*Tamanho padrão para tablets*/
+@media only screen and (max-width: 865px) {
 	.container {
 		width: 100%;
 	}
@@ -30,6 +31,114 @@
 	#btn-search {
 		right: 4px;
 	}
+	header #row-hr-1 {
+		display: block;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 10;
+		
+	}
+	#row-hr-1 {
+		background-color: #3498db;
+		height: 40px;
+	}
+
+	header #menu-mobile {
+		display: block;
+		transition: 1s;
+		position: fixed;
+		background-color: #3498db;
+		width: 60%;
+		height: 100%;
+		left:-60%;
+		z-index: 5;
+	}
+
+	
+	
+	header #row-hr-1 li a {
+		width: 32px;
+		height: 32px;
+		display: block;
+	}
+	header #input-search-mobile {
+		transition: 1s;
+		position: fixed;
+		width: 40%;
+		left: 36%;
+		background-color: #3498db;
+		border: none;
+		height: 40px;
+		color: #fff;
+		outline: 0;
+		font-size: 16px;
+	}
+	header.open-search #input-search-mobile {
+		top: 0;
+	}
+	header.open-menu #menu-mobile {
+		left: 0;
+		
+	}
+	header.open-menu #menu-mobile-mask {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,.5);
+		z-index: 4;
+	}
+	header.open-menu #logotipo {
+		position: fixed;
+		top: 50px;
+		height: 76px;
+		left: calc(40% - 33px);
+	}
+	header #menu-mobile ul {
+		margin: 20px;
+		margin-top: 60px;
+	}
+	header #menu-mobile li {
+		text-align: center;
+		border-top: #fff 1px solid;
+	}
+	header #menu-mobile li:last-child {
+		border-bottom: #fff 1px solid;
+	}
+	header #menu-mobile li a {
+		color: #fff;
+		font-family: 'OpenSans';
+		font-weight: bold;
+		font-size: 16px;
+		padding: 18px;
+		display: block;
+		text-decoration: none;
+	}
+	header .bar-close {
+		position: absolute;
+		bottom: 40px;
+		right: 0;
+		background-color: #2c82c9;
+		height: 40px;
+		width: 100%;
+	}
+	header .bar-close .btn-close {
+		background:none;
+		border: none;
+		color: #fff;
+		font-size: 22px;
+	}
+	
+	header.open-search #logotipo {
+		z-index: 9;
+	}
+}
+
+@media only screen and (max-width: 765px) {
+	
+	
 	#banner {
 		height: 317px;
 		background-size: cover;
@@ -107,94 +216,12 @@
 	footer .hidden-sm-up {
 		margin-top: -10px;
 	}
-	header #row-hr-1 {
-		position: fixed;
-		top: 0;
-		width: 100%;
-		z-index: 10;
-	}
+	
 	footer .page-up {
 		display: inline-block!important;
 	}
-	header #menu-mobile {
-		position: fixed;
-		background-color: #3498db;
-		width: 60%;
-		height: 100%;
-		left:-60%;
-		transition: 1s;
-		z-index: 5;
-	}
-	header.open-menu #menu-mobile {
-		left: 0;
-	}
-	header.open-menu #menu-mobile-mask {
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		background-color: rgba(0,0,0,.5);
-		z-index: 4;
-	}
-	header.open-menu #logotipo {
-		position: fixed;
-		top: 50px;
-		height: 76px;
-		left: calc(40% - 33px);
-	}
-	header.open-menu #menu-mobile ul {
-		margin: 20px;
-		margin-top: 60px;
-	}
-	header.open-menu #menu-mobile li {
-		text-align: center;
-		border-top: #fff 1px solid;
-	}
-	header.open-menu #menu-mobile li:last-child {
-		border-bottom: #fff 1px solid;
-	}
-	header.open-menu #menu-mobile li a {
-		color: #fff;
-		font-family: 'OpenSans';
-		font-weight: bold;
-		font-size: 16px;
-		padding: 18px;
-		display: block;
-		text-decoration: none;
-	}
-	header.open-menu .bar-close {
-		position: absolute;
-		bottom: 40px;
-		right: 0;
-		background-color: #2c82c9;
-		height: 40px;
-		width: 100%;
-	}
-	header.open-menu .bar-close .btn-close {
-		background:none;
-		border: none;
-		color: #fff;
-		font-size: 22px;
-	}
-	header #input-search-mobile {
-		transition: 1s;
-		position: fixed;
-		width: 40%;
-		left: 36%;
-		background-color: #3498db;
-		border: none;
-		height: 40px;
-		color: #fff;
-		outline: 0;
-		font-size: 16px;
-	}
-	header.open-search #input-search-mobile {
-		top: 0;
-	}
-	header.open-search #logotipo {
-		z-index: 9;
-	}
+	
+	
 	#row-section-2 #stadium
 	{
 		width: 100%;
