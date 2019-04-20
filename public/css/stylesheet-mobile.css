@@ -1,7 +1,7 @@
 
 /*Tamanho padrão para tablets*/
 /*Tamanho padrão para tablets*/
-@media only screen and (max-width: 910px) {
+@media only screen and (max-width: 1064px) {
 	.container {
 		width: 100%;
 	}

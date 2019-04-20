@@ -27,6 +27,7 @@
 					<li><a href="http://www.fat32.com.br/">Portfólio</a></li>
 					<li><a href="http://www.ecommerce.fat32.com.br/">E-commerce</a></li>
 					<li><a href="http://www.e-book.fat32.com.br/">E-book Store</a></li>
+					<li><a href="http://www.linhaprojetos.fat32.com.br/">Linha Projetos</a></li>
 					<li><a href="http://www.code.fat32.com.br/">Code Samples</a></li>
 					<li><a href="http://www.borussia.fat32.com.br/">Borussia</a></li>
 					<li><a href="/admin/login">Login</a></li>
@@ -59,6 +60,7 @@
 					<li><a href="http://www.fat32.com.br/">Portfólio</a></li>
 					<li><a href="http://www.ecommerce.fat32.com.br/">E-commerce</a></li>
 					<li><a href="http://www.e-book.fat32.com.br/">E-book Store</a></li>
+					<li><a href="http://www.linhaprojetos.fat32.com.br/">Linha Projetos</a></li>
 					<li><a href="http://www.code.fat32.com.br/">Code Samples</a></li>
 					<li><a href="http://www.borussia.fat32.com.br/">Borussia</a></li>
 					<li><a href="/admin/login">Login</a></li>
