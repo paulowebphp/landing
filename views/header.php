@@ -3,15 +3,14 @@
 	<head>
 
 		<meta charset="utf-8">
-		<meta name="viewport" content="width:device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Landing Page</title>
 		<link rel="icon" type="image/png" href="public/images/icons/favicon.ico"/>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		
-		<link rel="stylesheet" href="lib/owl.carousel/owl-carousel/owl.carousel.css">
-		<link rel="stylesheet" href="public/fonts/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="public/css/stylesheet.css">
-		<link rel="stylesheet" href="public/css/stylesheet-mobile.css">
+		<link rel="stylesheet" href="/public/fonts/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/public/css/stylesheet.css">
+		<link rel="stylesheet" href="/public/css/stylesheet-mobile.css">
 
 
 	</head>
@@ -63,9 +62,9 @@
 			</div>
 			-->
 
-			<div id="row-hr-1" class="container">
+			<div id="row-hr-1">
 				
-				<input type="search" id="input-search-mobile"	 placeholder="Buscarum...">
+				
 				
 				<button id="btn-bars" type="button"><i class="fa fa-bars"></i></button>
 				

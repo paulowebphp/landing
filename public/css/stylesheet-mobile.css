@@ -251,6 +251,10 @@
 		content: "\f09a";
 		color: #11171D;
 	}
+	#row-section-1 {
+		padding: 10% 1%;
+		
+	}
 	#row-section-1 p {
 		font-size: 36px;
 		

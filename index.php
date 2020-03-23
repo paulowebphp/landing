@@ -26,6 +26,9 @@ $app->get(
 			User::logout();
 			
 		}//end if
+
+		
+
         
 		require_once("views/index.php");
 		

@@ -36,7 +36,7 @@ header {
 	height: 90px;
 	background-color: rgba(52, 152, 219, 1);
 	z-index: 2;
-  position: relative;
+  	position: relative;
 }
 header .container {
 	position: relative;
@@ -98,6 +98,7 @@ header #logotipo {
     top: -100px;
 }
 */
+
 .dropdown-menu{
 	background: #3498db;
 }
@@ -140,17 +141,16 @@ header #logotipo {
 	text-align: center;
 	padding: 50px;
 }
-#row-section-1 p {
+#row-section-1 h1 {
 	color: #fff;
 	font-family: 'OpenSans';
-	font-size: 54px;
+	font-size: 2.5rem;
 	text-shadow: 1px 1px 1px #000;
 }
-#row-section-1 p small {
+#row-section-1 h2 {
 	color: #fff;
 	font-weight: bolder;
-	font-size: 24px;
-	margin-top: 15px;
+	font-size: 1.8rem;
 	display: block;
 }
 
@@ -160,10 +160,10 @@ header #logotipo {
 	text-align: center;
 	padding: 50px;
 }
-#row-section-2 p {
+#row-section-2 h3 {
 	color: #fff;
 	font-family: 'OpenSans';
-	font-size: 54px;
+	font-size: 2.5rem;
 	text-shadow: 1px 1px 1px #000;
 
 }
@@ -173,11 +173,10 @@ header #logotipo {
 	right: 28px;
 }
 
-#row-section-2 p small {
+#row-section-2 h4 {
 	color: #fff;
 	font-weight: bolder;
-	font-size: 24px;
-	margin-top: 15px;
+	font-size: 1.8rem;
 	display: block;
 }
 
@@ -187,17 +186,16 @@ header #logotipo {
 	text-align: center;
 	padding: 50px;
 }
-#row-section-3 p {
+#row-section-3 h3 {
 	color: #fff;
 	font-family: 'OpenSans';
-	font-size: 54px;
+	font-size: 2.5rem;
 	text-shadow: 1px 1px 1px #000;
 }
-#row-section-3 p small {
+#row-section-3 h4 {
 	color: #fff;
 	font-weight: bolder;
-	font-size: 24px;
-	margin-top: 15px;
+	font-size: 1.8rem;
 	display: block;
 }
 #row-section-3 img {
@@ -212,19 +210,17 @@ header #logotipo {
 	width: 100%;
 	text-align: center;
 	padding: 50px;
-	margin-bottom: 50px;
 }
-#row-section-4 p {
+#row-section-4 h3 {
 	color: #f22613;
 	font-family: 'OpenSans';
-	font-size: 54px;
+	font-size: 2.5rem;
 	text-shadow: 1px 1px 1px #000;
 }
-#row-section-4 p small {
+#row-section-4 h4 {
 	color: #3498db;
 	font-weight: bolder;
-	font-size: 24px;
-	margin-top: 15px;
+	font-size: 1.8rem;
 	display: block;
 }
 #row-section-4 img {
@@ -233,7 +229,44 @@ header #logotipo {
 	
 }
 
-
+/*********TOPS E BOTTOMS**************/
+/*********TOPS E BOTTOMS**************/
+/*********TOPS E BOTTOMS**************/
+/*********TOPS E BOTTOMS**************/
+.bottom1{
+    margin-bottom: 2%;
+}
+.bottom2{
+    margin-bottom: 5%!important;
+}
+.bottom3{
+    margin-bottom: 10%;
+}
+.bottom4{
+    margin-bottom: 15%;
+}
+.bottom5{
+    margin-bottom: 20%;
+}
+.top1{
+    margin-top: 2%;
+}
+.top2{
+    margin-top: 5%!important;
+}
+.top3{
+    margin-top: 10%;
+}
+.top4{
+    margin-top: 15%;
+}
+.top5{
+    margin-top: 20%;
+}
+/*********TOPS E BOTTOMS**************/
+/*********TOPS E BOTTOMS**************/
+/*********TOPS E BOTTOMS**************/
+/*********TOPS E BOTTOMS**************/
 
 
 

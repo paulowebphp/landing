@@ -75,8 +75,8 @@
 				
 				<div class="container copyright-mobile">
 					
-					<p class="pull-left">Copyright © Fa32 Web Services 2019. All rights reserved.</p>
-					<p class="pull-right text-roxo">Created by Jose Paulo de Carvalho C.</p>
+					<p class="pull-left">Todos Os Direitos Reservados © <?php echo date('Y'); ?></p>
+					<p class="pull-right text-roxo">Criado por Jose Paulo de Carvalho</p>
 
 				</div>
 
