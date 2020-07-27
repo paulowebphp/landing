@@ -38,7 +38,7 @@
 								<a class="dropdown-item" href="https://ext2.com.br">Portfólio</a>
 								<a class="dropdown-item" href="https://wedding.ext2.com.br">Wedding</a>
 								<a class="dropdown-item" href="https://plugin.ext2.com.br/formulario-de-contato">Plugin</a>
-								<a class="dropdown-item" href="https://ecommerce.ext2.com.br">E-commerce</a>
+								
 								<a class="dropdown-item" href="https://e-book.ext2.com.br">E-book Store</a>
 								<a class="dropdown-item" href="https://linhaprojetos.ext2.com.br">Linha Projetos</a>
 								<a class="dropdown-item" href="https://code.ext2.com.br">Code Sample</a>
@@ -88,7 +88,7 @@
 								<a class="dropdown-item" href="https://ext2.com.br">Portfólio</a>
 								<a class="dropdown-item" href="https://wedding.ext2.com.br">Wedding</a>
 								<a class="dropdown-item" href="https://plugin.ext2.com.br/formulario-de-contato">Plugin</a>
-								<a class="dropdown-item" href="https://ecommerce.ext2.com.br">E-commerce</a>
+								
 								<a class="dropdown-item" href="https://e-book.ext2.com.br">E-book Store</a>
 								<a class="dropdown-item" href="https://linhaprojetos.ext2.com.br">Linha Projetos</a>
 								<a class="dropdown-item" href="https://code.ext2.com.br">Code Sample</a>
